@@ -39,7 +39,7 @@ http://localhost:3000/api/login
 
 参数:
 |参数|说明|
-|---|---|
+|------|------|
 |username|用户名|
 |password|密码|
 
@@ -51,7 +51,7 @@ http://localhost:3000/api/register
 
 参数:
 |参数|说明|
-|---|---|
+|------|------|
 |username|用户名|
 |password|密码|
 
