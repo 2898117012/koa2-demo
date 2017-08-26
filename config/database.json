@@ -1,0 +1,10 @@
+{
+  "dialect": "postgres",
+  "host": "localhost",
+  "port": "5432",
+  "dbName": "koademo",
+  "userName": "koademo",
+  "passWord": "123456",
+  "ssl": false,
+  "timezone": "+08:00"
+}
