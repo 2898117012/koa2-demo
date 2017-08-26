@@ -38,6 +38,7 @@ http://localhost:3000/api/login
 方法：`post`
 
 参数:
+
 |参数|说明|
 |------|------|
 |username|用户名|
@@ -50,6 +51,7 @@ http://localhost:3000/api/register
 方法：`post`
 
 参数:
+
 |参数|说明|
 |------|------|
 |username|用户名|
