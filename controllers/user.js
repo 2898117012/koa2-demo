@@ -6,24 +6,28 @@ const Login = async (ctx) => {
     let username = ctx.request.body.username;
     let password = ctx.request.body.password;
     const user = await models.user.findOne({where: {username: username}});
-    ctx.status = 200;
-    if (user && user.password === password) {
-        user.token = createToken(user.username);
-        await user.save();
-        ctx.body = {
-            success: true,
-            user: {
-                username: user.username,
-                token: user.token,
-                create_time: user.create_time
-            }
-        }
-    } else {
+
+    if(!user) {
         ctx.body = {
             success: false,
             message: '用户不存在'
         }
+        // Node.js is relatively not that fast for code execution, return as early as possible
+        return ctx.status = 404;
     }
+
+    if(!(user.password === password)) return ctx.status = 401; // Same thing applied
+
+    ctx.body = {
+        success: true,
+        user: {
+            username: user.username,
+            token: user.token,
+            create_time: user.create_time
+        }
+    };
+
+    // No need for ctx.status = 200
 };
 const Reg = async (ctx) => {
     let username = ctx.request.body.username;
