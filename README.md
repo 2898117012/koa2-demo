@@ -1,5 +1,7 @@
 # Koa2 Demo
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/2898117012/koa2-demo.svg)](https://greenkeeper.io/)
+
 基于[koa2](https://github.com/koajs/koa) 和 [sequelize](https://github.com/sequelize/sequelize)的JWT演示项目.
 
 ## 要求
